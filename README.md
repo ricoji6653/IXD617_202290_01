@@ -12,3 +12,6 @@ IXD 617 Advanced Tech: Mobile Web
 
 ##### Jquery Links
 - http://ricoricoyeah.com/aau/IXD617/examples/jquery.html 
+
+###### MusicM Link Mobile
+- http://ricoricoyeah.com/aau/IXD617/  
