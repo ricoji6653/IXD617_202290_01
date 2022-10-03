@@ -1,17 +1,17 @@
 
 /* ACCORDION */
 .accordion dt {
-    background-color: #b8d9f5;
-    padding: 0.5em 1em;
+    background-color: #a2fc93;
+    padding: 1.5em 2em;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.8em;
     cursor: pointer;
 }
 .accordion dd {
     padding: 1em;
     margin-inline-start: 0;
-    border: 2px solid #b8d9f5;
+    border: 2px solid #077e24;
     border-top-width: 0;
     display:none;
 }

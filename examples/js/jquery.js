@@ -11,7 +11,7 @@ $(()=>{
 
         // $(this).next().slideToggle();
 
-        $(this).next().slideDown()
+        $(this).next().slideToggle()
             .siblings("dd").slideUp();
     });
 
