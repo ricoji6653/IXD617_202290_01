@@ -9,3 +9,6 @@ IXD 617 Advanced Tech: Mobile Web
 
 #### Csszengarden Link
 - http://ricoricoyeah.com/aau/IXD617/csszengarden/index.html
+
+##### Jquery Links
+- http://ricoricoyeah.com/aau/IXD617/examples/jquery.html 
