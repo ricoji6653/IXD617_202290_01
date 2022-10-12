@@ -26,10 +26,33 @@ body {
     font-family:var(--font-body);
 }
 
+p {
+    background-color: white;
+    padding: 4px;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
 a {
     color:var(--color-main-medium);
     font-weight: bold;
     text-decoration: none;
+}
+
+h1 {
+    color:inherit
+    text-align: center;
+}
+
+h2 {
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 4px;
+}
+
+hr {
+    width: 294px;
+    border: 0.4px solid rgba(225, 225, 225, 0.82)
 }
 
 
@@ -57,6 +80,7 @@ a {
 
 [data-role="main"] {
     flex: 1 1 100%;
+    text-align: center;
     position: relative;
     overflow: hidden;
 
@@ -70,7 +94,10 @@ a {
     position:relative;
     overflow:hidden;
     background-color:white;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
+    
 
     z-index:2;
 }
@@ -333,4 +360,68 @@ a {
     overflow:auto;
 
     padding: 1em;
+}
+
+
+
+/* Recent Footer */
+[data-role="footer"] .icon {
+    width: 1.3rem;
+    height: 1.3rem;
+    vertical-align: middle;
+}
+[data-role="footer"] a {
+    line-height: 1rem;
+    color: inherit;
+}
+.footer-icon { 
+    display: block;
+    line-height: 1.7rem;
+}
+.footer-label {
+    line-height: 1.3rem;
+    font-size: 0.6rem;
+    display: block;
+}
+
+
+
+/* Profile Photo */
+.circle {
+    aspect-ratio: 1/1;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    
+}
+
+/* Music Event List */
+.eventimage {
+    position: relative;
+    width: 300px;
+    border-radius: 25px;
+    padding: 15px;
+    object-fit: cover;
+    height: 200px;
+}
+
+.animallist-item {
+    text-align: center;
+    background: rgba(238, 238, 238, 0.82);
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+
+
+.events {
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
