@@ -56,10 +56,6 @@ hr {
 }
 
 
-
-
-
-
 /* APP STRUCTURE */
 .ui-loader {
     display:none;
@@ -80,30 +76,38 @@ hr {
 
 [data-role="main"] {
     flex: 1 1 100%;
-    text-align: center;
     position: relative;
     overflow: hidden;
 
     z-index:1;
 }
+[data-role="main2"] {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+
 
 [data-role="header"],
 [data-role="footer"] {
     line-height: var(--header-height);
     height: var(--header-height);
+    width: auto;
     position:relative;
     overflow:hidden;
     background-color:white;
     box-shadow: 0 0 8px rgba(0,0,0,0.2);
-    border-top-left-radius: 0.8em;
-    border-top-right-radius: 0.8em;
     
 
     z-index:2;
 }
 
+[data-role="footer"] {
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
+    height: 70px;
 
-
+}
 
 /* Core Navigation */
 [data-role="header"] ul,
@@ -253,6 +257,7 @@ hr {
     background-color:white;
     display: block;
     box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.2);
+    color: inherit;
 }
 
 
@@ -375,6 +380,8 @@ hr {
     color: inherit;
 }
 .footer-icon { 
+    padding: 2px;
+    margin-top: 2px;
     display: block;
     line-height: 1.7rem;
 }
@@ -408,6 +415,7 @@ hr {
     padding: 15px;
     object-fit: cover;
     height: 200px;
+    margin-bottom: -20px;
 }
 
 .animallist-item {
