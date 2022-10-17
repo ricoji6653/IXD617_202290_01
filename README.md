@@ -15,3 +15,6 @@ IXD 617 Advanced Tech: Mobile Web
 
 ###### MusicM Link Mobile
 - http://ricoricoyeah.com/aau/IXD617/  
+
+####### Midterm Link
+- http://ricoricoyeah.com/aau/IXD617/
