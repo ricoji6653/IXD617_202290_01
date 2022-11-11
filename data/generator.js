@@ -41,8 +41,8 @@ const getLocations = () => (new Array(250)).fill(0).map((o,i)=>{
     o = {};
     o.id = i + 1;
     o.animal_id = chance.natural({min:1, max:50});
-    o.lat = chance.latitude({min:37.68, max:37.80});
-    o.lng = chance.longitude({min:-122.50, max:-122.38});
+    o.lat = chance.latitude({min:37.67, max:37.80});
+    o.lng = chance.longitude({min:-122.50, max:-122.37});
     o.description = chance.sentence();
     o.photo = `https://via.placeholder.com/${num()}x${num()}/${hex()}/fff/?text=PHOTO`;
     o.icon = `https://via.placeholder.com/${num()}x${num()}/${hex()}/fff/?text=ICON`;
