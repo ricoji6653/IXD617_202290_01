@@ -13,7 +13,7 @@
     <script src="lib/js/jquery-2.2.4.min.js"></script>
     <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
     <script src="src/js/app.js" type="module"></script>
-
+    
 
      <!-- <font type Outfit Sans Serif> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,7 +87,9 @@
             </div>
         </section>
     
-    
+   
+        
+
     <!-- RECENT PAGE -->
         <section data-role="page" id="recent-page">
             <div data-role="main">
@@ -123,6 +125,10 @@
             </footer>
         </section>
     
+
+
+
+
     
     <!-- LIST PAGE -->
         <section data-role="page" id="list-page">
@@ -193,7 +199,11 @@
         </section>
     
     
-    <!-- USER PROFILE PAGE -->
+ 
+ 
+ 
+ 
+        <!-- USER PROFILE PAGE -->
         <section data-role="page" id="user-profile-page">
             <div data-role="main2">
                 <div class="animallist">
@@ -231,10 +241,16 @@
         </section>
     
     
+
+
+
+
+
+
     <!-- Music Event PROFILE PAGE -->
     <section data-role="page" id="animal-profile-page">
         <header data-role="header">
-            <h1>Music Event Detail</h1>
+            <h1></h1>
             <ul>
                 <li><a href="#" data-rel="back">Back</a></li>
                 <li class="flex-stretch"></li>
@@ -255,6 +271,45 @@
             </div>
         </div>
     </section>
+
+        <!-- USER Edit Photo PAGE -->
+        <section data-role="page" id="user-profile-page">
+            <div data-role="main2">
+                <div class="animallist">
+                    <h1>Edit User Photo</h1>
+                    <img src="images/profileimage.jpg" alt="" class="circle">
+                        <h2>Location: San Francisco</h2>
+                    <div class="info">
+                        <hr>
+                        <p>Edit Profile</p>
+                        <hr>
+                        <p>Help Center</p>
+                        <hr>
+                        <p><a href="#" class="js-logout">Log out</a></p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            
+            <footer data-role="footer">
+                <ul>
+                    <li><a href="#recent-page">
+                        <span class="footer-icon"><img class="icon" src="images/icons/map.png"></span>
+                        <span class="footer-label">Recent</span>
+                    </a></li>
+                    <li><a href="#list-page">
+                        <span class="footer-icon"><img class="icon" src="images/icons/list.png"></span>
+                        <span class="footer-label">List</span>
+                    </a></li>
+                    <li><a href="#user-profile-page">
+                        <span class="footer-icon"><img class="icon" src="images/icons/acount.png"></span>
+                        <span class="footer-label">Acount</span>
+                    </a></li>
+                </ul>
+            </footer>
+        </section>
+    
+    
     
     </body>
     </html>
