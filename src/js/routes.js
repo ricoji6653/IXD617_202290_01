@@ -1,7 +1,6 @@
 import { query } from "./functions.js"
 import { makeMap, makeMarkers } from "./maps.js";
 import { makeAnimalList, makeAnimalMapDescription, makeAnimalProfileDescription, makeEditAnimalForm, makeEditUserForm, makeUserProfilePage } from "./parts.js";
-makeUserProfilePage } from "./parts.js";
 
 export const RecentPage = async() => {
     let {result:animal_locations} = await query({
@@ -27,8 +26,8 @@ export const RecentPage = async() => {
             // console.log(animal)
 
             // Just Navigate
-            // sessionStorage.animalId = animal.animal_id;
-            // $.mobile.navigate("#animal-profile-page")
+            //sessionStorage.animalId = animal.animal_id;
+            //$.mobile.navigate("#animal-profile-page")
 
             // Open Google InfoWindow
             // let {map,infoWindow} = map_el.data();

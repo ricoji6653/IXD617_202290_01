@@ -364,7 +364,7 @@ hr {
     padding: 0.5em 1em;
 }
 .modal-body {
-    background-color: white;
+    background-color: #fbebff;
     padding: 1em;
     flex: 1 1 100%;
     overflow: auto;
@@ -553,7 +553,7 @@ hr {
 
 
 
-
+/* User Profile Icon */
 
 
 .icon {
