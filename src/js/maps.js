@@ -1,6 +1,7 @@
 import { checkData } from "./functions.js";
 
 
+
 export const makeMap = async(target, center={lat:37.786038, lng:-122.399342}) => {
     await checkData(()=>window.google);
 
@@ -47,96 +48,32 @@ export const makeMarkers = (map_el,marker_locs=[]) => {
 }
 
 
-export const setMapBounds = (map_el,marker_locs=[]) => {
-    let {map} = map_el.data();
-    let zoom = 14;
-
-    if (marker_locs.length === 1) {
-        map.setCenter(marker_locs[0]);
-        map.setZoom(zoom);
-    } else if (marker_locs.length === 0) {
-        if (window.location.protocol !== "https:") return;
-        else {
-            navigator.geolocation.getCurrentPosition(p=>{
-                let pos = {
-                    lat:p.coords.latitude,
-                    lng:p.coords.longitude,
-                };
-                map.setCenter(pos);
-                map.setZoom(zoom);
-            },(...args)=>{
-                console.log(args);
-            },{
-                enableHighAccuracy: false,
-                timeout: 5000,
-                maximumAge: 0,
-            });
-        }
-    } else {
-        let bounds = new google.maps.LatLngBounds(null);
-        marker_locs.forEach(l => {
-            bounds.extend(l);
-        });
-        map.fitBounds(bounds);
-    }
-}
-
 
 
 
 
 const mapstyles = [
     {
-        "featureType": "all",
-        "elementType": "all",
-        "stylers": [
-            {
-                "saturation": "32"
-            },
-            {
-                "lightness": "-3"
-            },
-            {
-                "visibility": "on"
-            },
-            {
-                "weight": "1.18"
-            }
-        ]
-    },
-    {
         "featureType": "administrative",
-        "elementType": "labels",
+        "elementType": "labels.text.fill",
         "stylers": [
             {
-                "visibility": "off"
+                "color": "#444444"
             }
         ]
     },
     {
         "featureType": "landscape",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.man_made",
         "elementType": "all",
         "stylers": [
             {
-                "saturation": "-70"
-            },
-            {
-                "lightness": "14"
+                "color": "#f2f2f2"
             }
         ]
     },
     {
         "featureType": "poi",
-        "elementType": "labels",
+        "elementType": "all",
         "stylers": [
             {
                 "visibility": "off"
@@ -145,7 +82,28 @@ const mapstyles = [
     },
     {
         "featureType": "road",
-        "elementType": "labels",
+        "elementType": "all",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 45
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "labels.icon",
         "stylers": [
             {
                 "visibility": "off"
@@ -154,7 +112,7 @@ const mapstyles = [
     },
     {
         "featureType": "transit",
-        "elementType": "labels",
+        "elementType": "all",
         "stylers": [
             {
                 "visibility": "off"
@@ -166,22 +124,10 @@ const mapstyles = [
         "elementType": "all",
         "stylers": [
             {
-                "saturation": "100"
+                "color": "#e3e3fb"
             },
             {
-                "lightness": "-14"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "visibility": "off"
-            },
-            {
-                "lightness": "12"
+                "visibility": "on"
             }
         ]
     }
