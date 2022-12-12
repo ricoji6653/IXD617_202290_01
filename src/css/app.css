@@ -546,7 +546,10 @@ hr {
 }
 
 
-
+.gm-style img {
+    border-radius: 10px;
+    border: 2px solid #bb8bfd8a;
+}
 
 .animal-map-description {
     display:flex;
