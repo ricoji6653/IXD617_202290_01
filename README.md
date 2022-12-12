@@ -15,3 +15,6 @@ IXD 617 Advanced Tech: Mobile Web
 
 ###### Midterm
 - http://ricoricoyeah.com/aau/IXD617/  
+
+###### Final
+- http://ricoricoyeah.com/aau/IXD617/  
