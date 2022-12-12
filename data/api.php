@@ -39,6 +39,21 @@ function makeQuery($conn,$prep,$params,$makeResults=true) {
     }
 }
 
+
+function makeUpload($file, $folder) {
+    $filename = microtime(true) . "_" . $_FILES[$file]['name'];
+
+    if (@move_uploaded_file(
+        $_FILES[$file]['tmp_name'],
+        $folder.$filename
+    )) return ["result"=>$filename];
+    else return [
+        "error"=>"File Upload Failed",
+        "filename"=>$filename
+    ];
+}
+
+
 function makeStatement($data) {
     $conn = makeConn();
     $type = @$data->type;
@@ -97,6 +112,21 @@ function makeStatement($data) {
             ", $params);
 
 
+        case "search_animals":
+            return makeQuery($conn, "SELECT *
+            FROM `track_202290_animals`
+            WHERE 
+                `name` LIKE ? AND
+                `user_id` = ?
+            ", $params);
+
+        case "filter_animals":
+            return makeQuery($conn, "SELECT *
+            FROM `track_202290_animals`
+            WHERE 
+                `$params[0]` = ? AND
+                `user_id` = ?
+            ", [$params[1],$params[2]]);
 
 
 
@@ -139,7 +169,7 @@ function makeStatement($data) {
                 `user_id`,
                 `name`,
                 `type`,
-                `breed`,
+                `date`,
                 `description`,
                 `img`,
                 `date_create`
@@ -151,7 +181,7 @@ function makeStatement($data) {
                 ?,
                 ?,
                 ?,
-                'https://via.placeholder.com/400/?text=ANIMAL',
+                ?,
                 NOW()
             )
             ", $params, false);
@@ -223,14 +253,28 @@ function makeStatement($data) {
             SET
                 `name` = ?,
                 `type` = ?,
-                `breed` = ?,
-                `description` = ?
+                `date` = ?,
+                `description` = ?,
+                `img` = ?
             WHERE `id` = ?
             ", $params, false);
 
             if (isset($result['error'])) return $result;
             return ["result"=>"Success"];
 
+        
+    
+
+        /* UPLOAD */
+        case "update_user_photo":
+            $result = makeQuery($conn, "UPDATE
+            `track_202290_users`
+            SET `img` = ?
+            WHERE `id` = ?
+            ", $params, false);
+
+            if (isset($result['error'])) return $result;
+            return ["result"=>"Success"];
 
 
 
@@ -265,6 +309,11 @@ function makeStatement($data) {
         default:
             return ["error"=>"No Matched Type"];
     }
+}
+
+if (!empty($_FILES)) {
+    $result = makeUpload("image","../uploads/");
+    die(json_encode($result));
 }
 
 $data = json_decode(file_get_Contents("php://input"));

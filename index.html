@@ -104,9 +104,7 @@
         <div data-role="main">
             <div class="map"></div>
 
-            <div class="floater bottom right">
-                <a href="#choose-animal-page" class="btn-circle">&plus;</a>
-            </div>
+
 
             
 
@@ -147,7 +145,7 @@
     <section data-role="page" id="list-page">
         <header data-role="header">
             <form id="list-search-form" class="hotdog" data-ajax="false">
-                <input id="list-search-input" type="search" data-role="none" placeholder="Search">
+                <input id="list-search-input" type="search" data-role="none" placeholder="Search events...">
             </form>
         </header>
         <header data-role="header" class="filter-bar">
@@ -158,7 +156,8 @@
                 <a href="#animal-add-page" class="btn-circle">&plus;</a>
             </div>
         </div>
-            
+        
+
             <footer data-role="footer">
                 <ul>
                     <li><a href="#recent-page">
@@ -193,7 +192,7 @@
         <header data-role="header">
             <h1>Choose music event</h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img class="icon" src="images/icons/left.svg"  style="font-size:1.5em" ></a></li>
                 <li class="flex-stretch"></li>
                 <li><a href="#choose-location-page">Next</a></li>
             </ul>
@@ -201,7 +200,7 @@
         <div data-role="main">
             <input type="hidden" id="location-animal-id">
             <input type="hidden" id="location-back" value="-2">
-            form for choose animal
+            form for choose music type
         </div>
     </section>
 
@@ -213,7 +212,7 @@
         <header data-role="header">
             <h1>Choose Location</h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img class="icon" src="images/icons/left.svg"  style="font-size:1.5em" ></a></li>
                 <li class="flex-stretch"></li>
                 <li><a href="#choose-description-page">Next</a></li>
             </ul>
@@ -227,12 +226,12 @@
 
 
 
-    <!-- CHOOSE LOCATION PAGE -->
+    <!-- CHOOSE Description PAGE -->
     <section data-role="page" id="choose-description-page">
         <header data-role="header">
             <h1>Description of Music Event</h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img class="icon" src="images/icons/left.svg"  style="font-size:1.5em" ></a></li>
                 <li class="flex-stretch"></li>
                 <li><a href="#" class="js-submit-location-add-form">Save</a></li>
             </ul>
@@ -315,7 +314,7 @@
         <header data-role="header">
             <h1>Settings</h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img class="icon" src="images/icons/left.svg"  style="font-size:1.5em" ></a></li>
             </ul>
         </header>
         <div data-role="main">
@@ -334,9 +333,9 @@
         <header data-role="header">
             <h1>Edit User</h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img class="icon" src="images/icons/left.svg"  style="font-size:1.5em" ></a></li>
                 <li class="flex-stretch"></li>
-                <li><a href="#" class="js-submit-user-edit-form">Submit</a></li>
+                <li><a href="#" class="js-submit-user-edit-form"><img class="icon" src="images/icons/right.svg"  style="font-size:1.5em" ></a></li>
             </ul>
         </header>
         <form data-role="main" data-ajax="false" id="user-edit-form" class="padded display-flex flex-column full overscroll">
@@ -358,9 +357,9 @@
         <header data-role="header">
             <h1>Edit Password</h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img class="icon" src="images/icons/left.svg"  style="font-size:1.5em" ></a></li>
                 <li class="flex-stretch"></li>
-                <li><a href="#" class="js-submit-password-edit-form">Submit</a></li>
+                <li><a href="#" class="js-submit-password-edit-form"><img class="icon" src="images/icons/right.svg"  style="font-size:1.5em" ></a></li>
             </ul>
         </header>
         <form data-role="main" data-ajax="false" id="password-edit-form" class="padded display-flex flex-column full overscroll">
@@ -377,14 +376,17 @@
         </form>
     </section>
 
+
+
+    
     <!-- USER EDIT PHOTO PAGE -->
     <section data-role="page" id="user-edit-photo-page">
         <header data-role="header">
             <h1>Edit User Photo</h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img class="icon" src="images/icons/left.svg"  style="font-size:1.5em" ></a></li>
                 <li class="flex-stretch"></li>
-                <li><a href="#" class="js-submit-user-edit-photo-form">Submit</a></li>
+                <li><a href="#" class="js-submit-user-edit-photo-form"><img class="icon" src="images/icons/right.svg"  style="font-size:1.5em" ></a></li>
             </ul>
         </header>
         <form data-role="main" data-ajax="false" id="user-edit-photo-form" class="padded display-flex flex-column full overscroll">
@@ -401,15 +403,15 @@
         <header data-role="header">
             <h1></h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img class="icon" src="images/icons/left.svg"  style="font-size:1.5em" ></a></li>
                 <li class="flex-stretch"></li>
-                <li><a href="#animal-edit-page">Edit</a></li>
+                <li><a href="#animal-edit-page"><img class="icon" src="images/icons/edit.svg"  style="font-size:1.5em" ></a></li>
             </ul>
         </header>
         <div data-role="main">
             <div class="animal-profile-top">
                 <div class="floater bottom right">
-                    <a href="#" class="js-animal-delete"><img class="icon" src="images/icons/trash.svg" style="font-size:1.5em" /></a>
+                    <a href="#" class="js-animal-delete"><img class="icon" src="images/icons/delete.svg" style="font-size:1.5em" /></a>
                 </div>
             </div>
             <div class="animal-profile-nav">
@@ -439,9 +441,9 @@
         <header data-role="header">
             <h1>Edit Event</h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img class="icon" src="images/icons/left.svg"  style="font-size:1.5em" ></a></li>
                 <li class="flex-stretch"></li>
-                <li><a href="#" class="js-submit-animal-edit-form">Submit</a></li>
+                <li><a href="#" class="js-submit-animal-edit-form"><img class="icon" src="images/icons/right.svg"  style="font-size:1.5em" ></a></li>
             </ul>
         </header>
         <form data-role="main" data-ajax="false" id="animal-edit-form" class="padded display-flex flex-column full overscroll">
@@ -462,9 +464,9 @@
         <header data-role="header">
             <h1>Add a Music Event</h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img class="icon" src="images/icons/left.svg"  style="font-size:1.5em" ></a></li>
                 <li class="flex-stretch"></li>
-                <li><a href="#" class="js-submit-animal-add-form">Submit</a></li>
+                <li><a href="#" class="js-submit-animal-add-form"><img class="icon" src="images/icons/right.svg"  style="font-size:1.5em" ></a></li>
             </ul>
         </header>
         <form data-role="main" data-ajax="false" id="animal-add-form" class="padded display-flex flex-column full overscroll">
@@ -472,7 +474,7 @@
         </form>
     </section>
     
-    
+
     
     </body>
     </html>

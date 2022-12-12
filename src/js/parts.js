@@ -1,13 +1,13 @@
 import { templater } from "./functions.js";
 
 
-export const makeAnimalList = templater(({id,name,type,breed,img})=>`
+export const makeAnimalList = templater(({id,name,type,date,img})=>`
 <a class="animallist-item animal-jump" href="#animal-profile-page" data-id="${id}">
     <div class="animallist-image"><img src="${img}"></div>
     <div class="animallist-body">
         <div class="animallist-name">${name}</div>
         <div class="animallist-type">${type}</div>
-        <div class="animallist-breed">${breed}</div>
+        <div class="animallist-date">${date}</div>
     </div>
 </a>
 `)
@@ -17,20 +17,21 @@ export const makeUserProfilePage = ({name,email,username,img})=>`
     <div class="user-profile-image"><a href="#user-edit-photo-page"><img src="${img}"></a></div>
     <div class="user-profile-body">
         <div class="user-profile-name">${name}</div>
-        <div class="user-profile-breed">@${username}</div>
+        <div class="user-profile-date">@${username}</div>
         <div class="user-profile-email">${email}</div>
     </div>
 </div>
 `
 
-export const makeAnimalProfileDescription = ({name,type,breed})=>`
+export const makeAnimalProfileDescription = ({name,type,date,description})=>`
 <h2>${name}</h2>
 <div>${type}</div>
-<div>${breed}</div>
+<div>${date}</div>
+<div>${description}</div>
 `
 
 
-export const makeAnimalMapDescription = ({name,type,breed,img}) => {
+export const makeAnimalMapDescription = ({name,type,date,img}) => {
     return `<div class="animal-map-description display-flex">
         <div class="animal-map-image">
             <img src="${img}" />
@@ -38,7 +39,7 @@ export const makeAnimalMapDescription = ({name,type,breed,img}) => {
         <div class="animal-map-body">
             <h1>${name}</h1>
             <div>${type}</div>
-            <div>${breed}</div>
+            <div>${date}</div>
         </div>
     </div>`;
 }
@@ -80,6 +81,12 @@ const FormControlTextarea = ({namespace,name,displayname,placeholder,value}) => 
 
 export const makeEditAnimalForm = ({animal,namespace}) => {
     return `
+    <div class="form-control">
+        <input type="hidden" id="${namespace}-photo-image" value="${animal.img??""}">
+        <label class="imagepicker replace thumbnail ${animal.img?"picked":""}" style="background-image:url('${animal.img}')">
+            <input type="file" id="${namespace}-photo-input" data-role="none" class="hidden">
+        </label>
+    </div>
     ${FormControlInput({
         namespace,
         name: "name",
@@ -98,11 +105,11 @@ export const makeEditAnimalForm = ({animal,namespace}) => {
     })}
     ${FormControlInput({
         namespace,
-        name: "breed",
-        displayname: "Breed",
+        name: "date",
+        displayname: "Date",
         type: "text",
-        placeholder: "Type a Breed",
-        value: animal.breed
+        placeholder: "Type a Date",
+        value: animal.date
     })}
     ${FormControlTextarea({
         namespace,
@@ -129,7 +136,5 @@ export const makeFilterList = (animals) => {
         <span data-filter="type" data-value="">All</span>
         |
         ${filterList(animals,'type')}
-        |
-        ${filterList(animals,'breed')}
     `
 }

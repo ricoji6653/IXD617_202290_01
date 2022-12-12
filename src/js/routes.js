@@ -1,6 +1,6 @@
 import { query } from "./functions.js"
 import { makeMap, makeMarkers } from "./maps.js";
-import { makeAnimalList, makeAnimalMapDescription, makeAnimalProfileDescription, makeEditAnimalForm, makeEditUserForm, makeUserProfilePage } from "./parts.js";
+import { makeAnimalList, makeAnimalMapDescription, makeAnimalProfileDescription, makeEditAnimalForm, makeEditUserForm, makeFilterList, makeUserProfilePage } from "./parts.js";
 
 export const RecentPage = async() => {
     let {result:animal_locations} = await query({
@@ -132,7 +132,7 @@ export const AnimalAddPage = async() => {
         animal:{
             name:'',
             type:'',
-            breed:'',
+            date:'',
             description:'',
         },
         namespace:'animal-add'
