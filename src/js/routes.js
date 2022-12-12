@@ -30,14 +30,14 @@ export const RecentPage = async() => {
             //$.mobile.navigate("#animal-profile-page")
 
             // Open Google InfoWindow
-            // let {map,infoWindow} = map_el.data();
-            // infoWindow.open(map, m);
-            // infoWindow.setContent(makeAnimalMapDescription(animal));
+            let {map,infoWindow} = map_el.data();
+            infoWindow.open(map, m);
+            infoWindow.setContent(makeAnimalMapDescription(animal));
 
-            $("#map-recent-modal")
-                .addClass("active")
-                .find(".modal-body")
-                .html(makeAnimalMapDescription(animal))
+            //$("#map-recent-modal")
+            //    .addClass("active")
+            //    .find(".modal-body")
+            //    .html(makeAnimalMapDescription(animal))
         })
     });
 }
